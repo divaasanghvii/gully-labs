@@ -91,7 +91,7 @@ const Navbar = ({ cartCount, onCartClick }: { cartCount: number; onCartClick: ()
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-8">
-          <a href="#" className="text-2xl font-display font-bold tracking-tighter">GULLY LABS</a>
+          <a href="#" className="text-2xl font-display font-bold tracking-tighter">गली LABS</a>
           <div className="hidden md:flex gap-6 text-sm font-medium uppercase tracking-widest">
             <a href="https://gullylabs.com/collections/everyday" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-500 transition-colors">Shop</a>
             <a href="#about" className="hover:text-neutral-500 transition-colors">About</a>
@@ -401,7 +401,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-24">
           <div className="col-span-2">
-            <h2 className="text-3xl font-display font-bold tracking-tighter mb-8">GULLY LABS</h2>
+            <h2 className="text-3xl font-display font-bold tracking-tighter mb-8">गली LABS</h2>
             <p className="text-neutral-400 max-w-sm mb-8">
               Join our community and stay updated with the latest releases, exclusive events, and performance tips.
             </p>
@@ -457,7 +457,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="pt-12 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-neutral-500">
-          <p>© 2026 Gully Labs. All rights reserved.</p>
+          <p>© 2026 गली LABS. All rights reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
