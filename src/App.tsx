@@ -9,6 +9,7 @@ import {
   Twitter, 
   Facebook,
   ChevronRight,
+  ChevronDown,
   Star,
   ShieldCheck,
   Zap,
@@ -93,10 +94,19 @@ const Navbar = ({ cartCount, onCartClick }: { cartCount: number; onCartClick: ()
         <div className="flex items-center gap-8">
           <a href="#" className="text-2xl font-display font-bold tracking-tighter">गली LABS</a>
           <div className="hidden md:flex gap-6 text-sm font-medium uppercase tracking-widest">
-            <a href="https://gullylabs.com/collections/everyday" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-500 transition-colors">Shop</a>
-            <a href="#about" className="hover:text-neutral-500 transition-colors">About</a>
-            <a href="#technology" className="hover:text-neutral-500 transition-colors">Tech</a>
-            <a href="https://gullylabs.com/blogs/news/%E0%A4%97%E0%A4%B2%E0%A5%80-labs-manifesto" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-500 transition-colors">Journal</a>
+            <div className="relative group">
+              <button className="flex items-center gap-1 hover:text-neutral-500 transition-colors py-2">
+                Shop <ChevronDown size={14} />
+              </button>
+              <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50 border border-neutral-100">
+                <a href="https://gullylabs.com/collections/design-led-1" target="_blank" rel="noopener noreferrer" className="block px-6 py-2 hover:bg-neutral-50 hover:text-emerald-600 transition-colors normal-case tracking-normal font-sans">Sneakers</a>
+                <a href="https://gullylabs.com/collections/slides" target="_blank" rel="noopener noreferrer" className="block px-6 py-2 hover:bg-neutral-100 hover:text-emerald-600 transition-colors normal-case tracking-normal font-sans">Slides</a>
+                <a href="https://gullylabs.com/collections/apparel" target="_blank" rel="noopener noreferrer" className="block px-6 py-2 hover:bg-neutral-100 hover:text-emerald-600 transition-colors normal-case tracking-normal font-sans">Apparel</a>
+              </div>
+            </div>
+            <a href="#about" className="hover:text-neutral-500 transition-colors py-2">About</a>
+            <a href="#technology" className="hover:text-neutral-500 transition-colors py-2">Tech</a>
+            <a href="https://gullylabs.com/blogs/news/%E0%A4%97%E0%A4%B2%E0%A5%80-labs-manifesto" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-500 transition-colors py-2">Journal</a>
           </div>
         </div>
         
@@ -135,8 +145,13 @@ const Navbar = ({ cartCount, onCartClick }: { cartCount: number; onCartClick: ()
                 <X size={24} />
               </button>
             </div>
-            <div className="flex flex-col gap-8 mt-12 text-4xl font-display font-bold">
-              <a href="https://gullylabs.com/collections/everyday" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>Shop</a>
+            <div className="flex flex-col gap-6 mt-12 text-4xl font-display font-bold">
+              <div className="flex flex-col gap-4">
+                <span className="text-neutral-400 text-sm uppercase tracking-widest font-sans">Shop</span>
+                <a href="https://gullylabs.com/collections/design-led-1" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="pl-4">Sneakers</a>
+                <a href="https://gullylabs.com/collections/slides" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="pl-4">Slides</a>
+                <a href="https://gullylabs.com/collections/apparel" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="pl-4">Apparel</a>
+              </div>
               <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a>
               <a href="#technology" onClick={() => setIsMobileMenuOpen(false)}>Technology</a>
               <a href="https://gullylabs.com/blogs/news/%E0%A4%97%E0%A4%B2%E0%A5%80-labs-manifesto" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>Journal</a>
